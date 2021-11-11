@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useContext } from "react";
+import Header from "./Components/Header";
+import { CasamentoProvider } from "./Providers/casamento";
+import { BebidasProvider } from "./Providers/bebidas";
+import { ConfraternizacaoProvider } from "./Providers/confraternizacao";
+import { FormaturaProvider } from "./Providers/formatura";
+import Routes from "./Routes";
 
 function App() {
+  const cardapio = useContext(BebidasProvider);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BebidasProvider>
+        <CasamentoProvider>
+          <ConfraternizacaoProvider>
+            <FormaturaProvider>
+              <Header />
+              <Routes />
+            </FormaturaProvider>
+          </ConfraternizacaoProvider>
+        </CasamentoProvider>
+      </BebidasProvider>
     </div>
   );
 }

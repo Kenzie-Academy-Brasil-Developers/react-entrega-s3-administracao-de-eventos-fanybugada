@@ -1,5 +1,4 @@
-import { Route, Switch } from "react-router";
-import { Switch } from "react-router";
+import { Route, Switch } from "react-router-dom";
 import Casamento from "../Pages/Casamento";
 import Confraternizacao from "../Pages/Confraternização";
 import Formatura from "../Pages/Formatura";

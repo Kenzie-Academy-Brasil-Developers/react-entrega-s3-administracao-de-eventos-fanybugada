@@ -1,11 +1,12 @@
 import { useContext } from "react";
 import { BebidasContext } from "../../Providers/bebidas";
+import { ContainerDiv } from "./style";
 
 function CardItem({ handleButtonEvent }) {
   const { cardapio } = useContext(BebidasContext);
 
   return (
-    <div>
+    <ContainerDiv>
       {cardapio &&
         cardapio.map((item, index) => (
           <div key={index}>
@@ -18,7 +19,7 @@ function CardItem({ handleButtonEvent }) {
             </button>
           </div>
         ))}
-    </div>
+    </ContainerDiv>
   );
 }
 

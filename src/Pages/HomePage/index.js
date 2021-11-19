@@ -7,15 +7,12 @@ import CardItem from "../../Components/CardItem";
 
 function HomePage() {
   const { bebidas, setBebidas } = useContext(BebidasContext);
-
   const { casamento, setCasamento } = useContext(CasamentoContext);
-
   const { confraternizacao, setConfraternizacao } = useContext(
     ConfraternizacaoContext
   );
-
   const { formatura, setFormatura } = useContext(FormaturaContext);
-
+  
   const [selection, setSelection] = useState(false);
 
   const handleButtonEvent = (item) => {

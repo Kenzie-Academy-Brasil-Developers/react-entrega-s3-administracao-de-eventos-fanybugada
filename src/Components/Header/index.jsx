@@ -1,11 +1,12 @@
-import { useHistory } from "react-router";
+import { useHistory } from "react-router-dom";
+import { HeaderContainer } from "./style";
 
 function Header() {
   const history = useHistory();
   const redirectTo = (address) => history.push(address);
 
   return (
-    <header>
+    <HeaderContainer>
       <div>
         <button onClick={() => redirectTo("/")}> Página inicial </button>
         <button onClick={() => redirectTo("/casamento")}> Casamento </button>
@@ -14,7 +15,7 @@ function Header() {
         </button>
         <button onClick={() => redirectTo("/formatura")}> Formatura </button>
       </div>
-    </header>
+    </HeaderContainer>
   );
 }
 
